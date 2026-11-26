@@ -1,0 +1,2214 @@
+* {
+    box-sizing:border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #171717;
+}
+
+.site-header {
+    height: 88px;
+    padding: 0 48px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #ffffff;
+}
+
+.logo {
+    color: #171717;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.main-nav {
+    display: flex;
+    gap: 38px;
+    margin-left: 48px;
+}
+
+.main-nav a {
+    color: #171717;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header-actions {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.header-search {
+    width: 250px;
+    height: 44px;
+
+    border: none;
+    border-radius: 12px;
+
+    background-color: #e5e7eb;
+    outline: none;
+}
+
+.add-project {
+    padding: 13px 22px;
+
+    background-color: #5b5ce2;
+    color: #ffffff;
+
+    text-decoration: none;
+    border-radius: 24px;
+    font-size: 16px;
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid #171717;
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    border-radius: inherit;
+}
+
+.hero {
+    min-height: 360px;
+    padding: 60px 48px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #e5e7eb;
+}
+
+.hero-content {
+    width: 38%;
+    flex-shrink: 0;
+}
+
+.hero-content h1 {
+    margin: 0 0 16px;
+
+    font-size: 46px;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.hero-content p {
+    margin: 0 0 34px;
+
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: 400;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    padding: 14px 24px;
+
+    border-radius: 24px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.primary-button {
+    background-color: #5b5ce2;
+    color: #ffffff;
+}
+
+.secondary-button {
+    background-color: #ffffff;
+    color: #171717;
+    border: 1px solid #171717;
+}
+
+.hero-images {
+    width: 50%;
+    min-height: 250px;
+    margin-left: auto;
+}
+
+.hero-images {
+    position: relative;
+    width: 54%;
+    height: 360px;
+
+    margin-left: 40px;
+}
+
+.hero-card {
+    position: absolute;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.hero-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-card-1 {
+    width: 250px;
+    height: 175px;
+
+    top: 5px;
+    left: 120px;
+
+    z-index: 3;
+    transform: rotate(-7deg);
+}
+
+.hero-card-2 {
+    width: 210px;
+    height: 155px;
+
+    top: 45px;
+    left: 365px;
+
+    z-index: 1;
+    transform: rotate(8deg);
+}
+
+.hero-card-3 {
+    width: 235px;
+    height: 175px;
+
+    top: 175px;
+    left: 30px;
+
+    z-index: 2;
+    transform: rotate(12deg);
+}
+
+.hero-card-4 {
+    width: 280px;
+    height: 190px;
+
+    top: 155px;
+    left: 285px;
+
+    z-index: 2;
+    transform: rotate(-5deg);
+}
+
+.popular {
+    padding: 34px 48px 40px;
+    background-color: #f6f7f9;
+}
+
+.popular-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    margin-bottom: 28px;
+}
+
+.popular-header h2 {
+    margin: 0;
+
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.popular-header a {
+    color: #5b5ce2;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.project-card {
+    min-width: 0;
+}
+
+.project-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    background-color: #d1d5db;
+    border-radius: 16px;
+}
+
+.project-card h3 {
+    margin: 12px 0 0;
+
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
+}
+
+.catalog-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 44px;
+
+    padding: 40px 48px 50px;
+}
+
+.catalog-sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog-sidebar h3 {
+    margin: 0 0 14px;
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.catalog-sidebar h3:not(:first-child) {
+    margin-top: 24px;
+}
+
+.catalog-sidebar label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 10px;
+
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.catalog-sidebar input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+
+    margin: 0;
+}
+
+.catalog-sidebar select {
+    width: 170px;
+    height: 42px;
+
+    padding: 0 12px;
+
+    border: 1px solid #171717;
+    border-radius: 12px;
+
+    background-color: #ffffff;
+    font-family: "Inter", sans-serif;
+}
+
+.catalog-content h1 {
+    margin: 0 0 24px;
+
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.catalog-card {
+    display: block;
+
+    color: #171717;
+    text-decoration: none;
+}
+
+.catalog-card-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    background-color: #d1d5db;
+    border-radius: 16px;
+}
+
+.catalog-card h3 {
+    margin: 12px 0 0;
+
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
+}
+
+.freelancers-page {
+    padding: 38px 48px 48px;
+}
+
+.freelancers-page h1 {
+    margin: 0 0 28px;
+
+    font-size: 32px;
+    font-weight: 800;
+}
+
+/* Фильтры */
+
+.freelancer-filters {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-bottom: 28px;
+}
+
+.filter-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 36px;
+    padding: 0 20px;
+
+    background-color: #e5e7eb;
+    color: #171717;
+
+    border: none;
+    border-radius: 20px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.filter-button.filter-active {
+    background-color: #5b5ce2;
+    color: #ffffff;
+}
+
+/* Список специалистов */
+
+.freelancers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Карточка специалиста */
+
+.freelancer-card {
+    display: grid;
+    grid-template-columns: 36% 1fr;
+    align-items: center;
+    gap: 24px;
+
+    padding: 16px 18px;
+
+    background-color: #e5e7eb;
+    border-radius: 18px;
+}
+
+/* Левая часть карточки */
+
+.freelancer-info {
+    display: flex;
+    align-items: center;
+}
+
+.freelancer-avatar {
+    width: 90px;
+    height: 90px;
+
+    flex-shrink: 0;
+
+    background-color: #ffffff;
+    border: 1px solid #171717;
+    border-radius: 50%;
+}
+
+.freelancer-text {
+    margin-left: 22px;
+}
+
+.freelancer-name {
+    color: #171717;
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.freelancer-role {
+    margin: 16px 0 6px;
+
+    font-size: 14px;
+}
+
+.freelancer-description {
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 1.3;
+}
+
+/* Портфолио справа */
+
+.freelancer-portfolio {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.project-preview {
+    width: 100%;
+    height: 150px;
+
+    background-color: #533838;
+    border-radius: 16px;
+}
+
+.profile-page {
+    padding: 0 48px 50px;
+}
+
+.profile-cover {
+    height: 210px;
+
+    background-color: #5b5ce2;
+}
+
+.profile-header {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 130px;
+    padding: 0 24px 0 220px;
+}
+
+.profile-avatar {
+    position: absolute;
+
+    width: 165px;
+    height: 165px;
+
+    left: 36px;
+    top: -82px;
+
+    background-color: #ffffff;
+    border: 1px solid #171717;
+    border-radius: 50%;
+}
+
+.profile-main-info h1 {
+    margin: 0 0 10px;
+
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.profile-main-info p {
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.profile-actions {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-message {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 130px;
+    height: 46px;
+
+    background-color: #5b5ce2;
+    color: #ffffff;
+
+    text-decoration: none;
+    border-radius: 18px;
+}
+
+.profile-more {
+    width: 46px;
+    height: 46px;
+
+    background-color: #ffffff;
+    border: 1px solid #171717;
+    border-radius: 16px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+.profile-content {
+    padding: 28px 0 0;
+}
+
+.profile-content h2 {
+    margin: 0 0 14px;
+
+    font-size: 28px;
+    font-weight: 800;
+}
+
+/* О себе */
+
+.about-section {
+    margin-bottom: 24px;
+}
+
+.about-section p {
+    max-width: 760px;
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* Навыки */
+
+.skills-section {
+    margin-bottom: 24px;
+}
+
+.skills-list {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.skills-list span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 105px;
+    height: 44px;
+    padding: 0 20px;
+
+    background-color: #e5e7eb;
+    border-radius: 14px;
+
+    font-size: 14px;
+}
+
+/* Портфолио */
+
+.profile-portfolio h2 {
+    margin-bottom: 16px;
+}
+
+.profile-projects {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.profile-project {
+    width: 100%;
+    height: 190px;
+
+    background-color: #d1d5db;
+    border-radius: 16px;
+}
+
+.project-page {
+    padding: 28px 48px 50px;
+}
+
+.back-link {
+    display: inline-block;
+
+    margin-bottom: 28px;
+
+    color: #5b5ce2;
+    text-decoration: none;
+
+    font-size: 15px;
+}
+
+.project-page h1 {
+    margin: 0 0 14px;
+
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.project-author {
+    margin: 0 0 22px;
+
+    font-size: 15px;
+}
+
+.project-author a {
+    color: #5b5ce2;
+    text-decoration: none;
+}
+
+/* Галерея проекта */
+
+.project-gallery {
+    margin-bottom: 16px;
+}
+
+.project-main-image {
+    width: 100%;
+    height: 360px;
+
+    background-color: #533838;
+    border-radius: 18px;
+}
+
+.project-thumbnails {
+    display: flex;
+    gap: 18px;
+
+    margin-top: 16px;
+}
+
+.project-thumbnail {
+    width: 160px;
+    height: 78px;
+
+    background-color: #533838;
+    border-radius: 14px;
+}
+
+/* Описание */
+
+.project-description {
+    margin-top: 12px;
+}
+
+.project-description h2,
+.project-skills h2 {
+    margin: 0 0 10px;
+
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.project-description p {
+    max-width: 760px;
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* Навыки */
+
+.project-skills {
+    margin-top: 14px;
+}
+
+.project-tags {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.project-tags span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 105px;
+    height: 44px;
+    padding: 0 20px;
+
+    background-color: #e5e7eb;
+    border-radius: 14px;
+
+    font-size: 14px;
+}
+
+.add-project-page {
+    padding: 30px 48px 50px;
+}
+
+.add-project-page h1 {
+    margin: 0 0 28px;
+
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.add-project-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-project-form label {
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.add-project-form input,
+.add-project-form select,
+.add-project-form textarea {
+    width: 100%;
+
+    margin-bottom: 20px;
+    padding: 0 16px;
+
+    border: 1px solid #171717;
+    border-radius: 16px;
+
+    background-color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+
+    outline: none;
+}
+
+.add-project-form input,
+.add-project-form select {
+    height: 44px;
+}
+
+.add-project-form textarea {
+    height: 110px;
+    padding-top: 14px;
+
+    resize: none;
+}
+
+/* Загрузка изображений */
+
+.project-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 205px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #171717;
+    border-radius: 16px;
+
+    color: #8b8b8b;
+
+    font-size: 14px;
+}
+
+/* Кнопки */
+
+.add-project-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.publish-project {
+    min-width: 135px;
+    height: 44px;
+
+    border: none;
+    border-radius: 16px;
+
+    background-color: #5b5ce2;
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.cancel-project {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 125px;
+    height: 44px;
+
+    border: 1px solid #171717;
+    border-radius: 16px;
+
+    color: #171717;
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.account-page {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+
+    min-height: calc(100vh - 88px);
+}
+
+/* Левая панель */
+
+.account-sidebar {
+    padding: 28px 24px;
+
+    background-color: #e5e7eb;
+    text-align: center;
+}
+
+.account-avatar {
+    width: 150px;
+    height: 150px;
+
+    margin: 0 auto 18px;
+
+    background-color: #ffffff;
+    border: 1px solid #171717;
+    border-radius: 50%;
+}
+
+.account-sidebar h2 {
+    margin: 0 0 8px;
+
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.account-sidebar p {
+    margin: 0 0 20px;
+
+    font-size: 14px;
+}
+
+.account-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.account-menu a {
+    color: #171717;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.account-menu .account-logout {
+    color: #e53935;
+}
+
+/* Правая часть */
+
+.account-content {
+    padding: 75px 48px 50px;
+}
+
+.account-content h1 {
+    margin: 0 0 22px;
+
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.account-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.account-project {
+    display: flex;
+    align-items: center;
+
+    min-height: 115px;
+    padding: 14px;
+
+    background-color: #e5e7eb;
+    border-radius: 18px;
+}
+
+.account-project-image {
+    width: 135px;
+    height: 90px;
+
+    flex-shrink: 0;
+
+    background-color: #533838;
+    border-radius: 16px;
+}
+
+.account-project-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 84px;
+    margin-left: 22px;
+}
+
+.account-project-info h3 {
+    margin: 0;
+
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.account-project-actions {
+    display: flex;
+    gap: 18px;
+}
+
+.account-project-actions a {
+    color: #171717;
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.account-project-actions .delete-project {
+    color: #e53935;
+}
+
+.auth-page {
+    display: flex;
+    justify-content: center;
+    padding: 50px 48px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 520px;
+
+    padding: 32px;
+
+    background-color: #f6f7f9;
+    border-radius: 20px;
+}
+
+.auth-card h1 {
+    margin: 0 0 28px;
+
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-form label {
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.auth-form input {
+    width: 100%;
+    height: 44px;
+
+    margin-bottom: 18px;
+    padding: 0 14px;
+
+    border: 1px solid #171717;
+    border-radius: 14px;
+
+    background-color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+
+    outline: none;
+}
+
+.auth-button {
+    height: 46px;
+    margin-top: 6px;
+
+    border: none;
+    border-radius: 16px;
+
+    background-color: #5b5ce2;
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.delete-project-form {
+    margin: 0;
+}
+
+.delete-project {
+    padding: 0;
+
+    border: none;
+    background: none;
+
+    color: #e53935;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.project-card {
+    min-width: 0;
+}
+
+.project-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    background: #d1d5db;
+    border-radius: 16px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.catalog-card {
+    display: block;
+    min-width: 0;
+
+    color: #171717;
+    text-decoration: none;
+}
+
+.catalog-card-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    background: #d1d5db;
+    border-radius: 16px;
+}
+
+.catalog-card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.project-main-image {
+    overflow: hidden;
+}
+
+.project-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 18px;
+}
+
+.project-main-image {
+    width: 100%;
+    max-width: 1250px;
+
+    aspect-ratio: 16 / 7;
+    height: auto;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.project-main-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+.project-main-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================================================
+   ИЗОБРАЖЕНИЯ ПРОФИЛЕЙ И ПОРТФОЛИО
+   ========================================================= */
+
+/* Аватар в каталоге фрилансеров */
+
+.freelancer-avatar {
+    overflow: hidden;
+}
+
+.freelancer-avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    border-radius: inherit;
+}
+
+
+/* Работы справа в каталоге фрилансеров */
+
+.project-preview {
+    overflow: hidden;
+}
+
+.project-preview img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    border-radius: inherit;
+}
+
+
+/* Большой аватар в публичном профиле */
+
+.profile-avatar {
+    overflow: hidden;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    border-radius: inherit;
+}
+
+/* Аватар в личном кабинете */
+
+.account-avatar {
+    overflow: hidden;
+}
+
+.account-avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    border-radius: inherit;
+}
+
+
+/* Работы в публичном профиле */
+
+.profile-project {
+    overflow: hidden;
+}
+
+.profile-project img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    border-radius: inherit;
+}
+
+/* =========================================================
+   ИНФОРМАЦИЯ НА СТРАНИЦЕ ПРОЕКТА
+   ========================================================= */
+
+.project-heading {
+    max-width: 1250px;
+    margin: 0 auto 22px;
+}
+
+.project-information {
+    max-width: 1250px;
+
+    margin: 30px auto 0;
+}
+
+.project-info-row {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+
+    gap: 40px;
+
+    padding: 24px 0;
+
+    border-bottom: 1px solid #171717;
+}
+
+.project-info-row:last-child {
+    border-bottom: none;
+}
+
+.project-info-row h2 {
+    margin: 0;
+
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.project-info-value {
+    min-width: 0;
+}
+
+.project-info-value p {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* =========================================================
+   АДАПТИВ FREEHUB
+   Базовый дизайн: 1920 px
+   Дополнительно: 2560 px / 960 px / 376 px
+   ========================================================= */
+
+
+/* =========================================================
+   2560 PX — ШИРОКИЙ МОНИТОР
+   ========================================================= */
+
+@media (min-width: 2200px) {
+
+    .site-header,
+    .hero,
+    .popular,
+    .catalog-layout,
+    .freelancers-page,
+    .profile-page,
+    .project-page,
+    .add-project-page,
+    .account-page {
+        max-width: 2200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .site-header {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+    .hero {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+    .popular {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+    .catalog-layout,
+    .freelancers-page,
+    .project-page,
+    .add-project-page {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+    .profile-page {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+    .hero-content h1 {
+        font-size: 52px;
+    }
+
+    .hero-content p {
+        font-size: 21px;
+        max-width: 650px;
+    }
+
+    .project-grid {
+        gap: 28px;
+    }
+
+    .catalog-grid {
+        gap: 28px;
+    }
+
+    .profile-project {
+        height: 220px;
+    }
+
+    .project-main-image {
+        height: 430px;
+    }
+
+    .account-page {
+        grid-template-columns: 320px 1fr;
+    }
+
+    .account-content {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+}
+
+
+/* =========================================================
+   960 PX — ПЛАНШЕТ / НЕБОЛЬШОЙ ЭКРАН
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    /* ---------- ШАПКА ---------- */
+
+    .site-header {
+        height: auto;
+        min-height: 82px;
+
+        padding: 18px 24px;
+
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .logo {
+        flex-shrink: 0;
+    }
+
+    .main-nav {
+        margin-left: 24px;
+        gap: 22px;
+    }
+
+    .header-actions {
+        gap: 12px;
+    }
+
+    .header-search {
+        display: none;
+    }
+
+    .add-project {
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+
+
+    /* ---------- ГЛАВНАЯ ---------- */
+
+    .hero {
+        min-height: 330px;
+
+        padding: 45px 24px;
+    }
+
+    .hero-content {
+        width: 48%;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content p {
+        font-size: 17px;
+    }
+
+    .hero-images {
+        width: 48%;
+        height: 300px;
+
+        margin-left: 15px;
+
+        transform: scale(0.82);
+        transform-origin: center;
+    }
+
+    .popular {
+        padding: 32px 24px 40px;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* ---------- КАТАЛОГ РАБОТ ---------- */
+
+    .catalog-layout {
+        grid-template-columns: 180px 1fr;
+
+        gap: 28px;
+
+        padding: 32px 24px 45px;
+    }
+
+    .catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+
+    /* ---------- ФРИЛАНСЕРЫ ---------- */
+
+    .freelancers-page {
+        padding: 32px 24px 45px;
+    }
+
+    .freelancer-filters {
+        gap: 10px;
+
+        overflow-x: auto;
+
+        padding-bottom: 6px;
+    }
+
+    .filter-button {
+        flex-shrink: 0;
+    }
+
+    .freelancer-card {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .freelancer-portfolio {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .project-preview {
+        height: 120px;
+    }
+
+
+    /* ---------- ПРОФИЛЬ ФРИЛАНСЕРА ---------- */
+
+    .profile-page {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .profile-cover {
+        height: 190px;
+    }
+
+    .profile-avatar {
+        width: 145px;
+        height: 145px;
+
+        top: -72px;
+    }
+
+    .profile-header {
+        padding-left: 195px;
+    }
+
+    .profile-main-info h1 {
+        font-size: 28px;
+    }
+
+    .profile-main-info p {
+        font-size: 14px;
+    }
+
+    .profile-projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* ---------- СТРАНИЦА ПРОЕКТА ---------- */
+
+    .project-page {
+        padding: 28px 24px 45px;
+    }
+
+    .project-main-image {
+        height: 330px;
+    }
+
+    .project-thumbnail {
+        width: 135px;
+        height: 70px;
+    }
+
+
+    /* ---------- ДОБАВИТЬ / РЕДАКТИРОВАТЬ ПРОЕКТ ---------- */
+
+    .add-project-page {
+        padding: 30px 24px 45px;
+    }
+
+    .project-upload {
+        height: 180px;
+    }
+
+
+    /* ---------- ЛИЧНЫЙ КАБИНЕТ ---------- */
+
+    .account-page {
+        grid-template-columns: 230px 1fr;
+    }
+
+    .account-sidebar {
+        padding: 28px 18px;
+    }
+
+    .account-avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .account-sidebar h2 {
+        font-size: 21px;
+    }
+
+    .account-content {
+        padding: 50px 28px;
+    }
+
+    .account-project-image {
+        width: 115px;
+        height: 80px;
+    }
+
+
+    /* ---------- ВХОД / РЕГИСТРАЦИЯ / ПРОФИЛЬ ---------- */
+
+    .auth-page {
+        padding: 40px 24px;
+    }
+}
+
+
+/* =========================================================
+   376 PX — МОБИЛЬНЫЕ УСТРОЙСТВА
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* ---------- ШАПКА ---------- */
+
+    .site-header {
+        min-height: auto;
+
+        padding: 14px 16px;
+
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .header-actions {
+        margin-left: auto;
+
+        gap: 8px;
+    }
+
+    .header-search {
+        display: none;
+    }
+
+    .add-project {
+        padding: 10px 12px;
+
+        border-radius: 18px;
+
+        font-size: 12px;
+    }
+
+    .avatar {
+        width: 38px;
+        height: 38px;
+    }
+
+    .main-nav {
+        order: 3;
+
+        width: 100%;
+
+        margin-left: 0;
+
+        gap: 20px;
+
+        overflow-x: auto;
+        white-space: nowrap;
+
+        padding-bottom: 3px;
+    }
+
+    .main-nav a {
+        flex-shrink: 0;
+
+        font-size: 14px;
+    }
+
+
+    /* ---------- ГЛАВНАЯ ---------- */
+
+    .hero {
+        min-height: auto;
+
+        padding: 36px 16px;
+
+        display: block;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        margin-bottom: 16px;
+
+        font-size: 34px;
+        line-height: 1.05;
+    }
+
+    .hero-content p {
+        margin-bottom: 26px;
+
+        font-size: 16px;
+        line-height: 1.35;
+    }
+
+    .hero-buttons {
+        gap: 10px;
+
+        flex-wrap: wrap;
+    }
+
+    .primary-button,
+    .secondary-button {
+        padding: 12px 17px;
+
+        font-size: 14px;
+    }
+
+    .hero-images {
+        display: none;
+    }
+
+
+    /* ---------- ПОПУЛЯРНЫЕ РАБОТЫ ---------- */
+
+    .popular {
+        padding: 28px 16px 36px;
+    }
+
+    .popular-header {
+        margin-bottom: 20px;
+    }
+
+    .popular-header h2 {
+        font-size: 26px;
+    }
+
+    .popular-header a {
+        font-size: 14px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+    }
+
+    .project-card h3 {
+        font-size: 15px;
+    }
+
+
+    /* ---------- КАТАЛОГ РАБОТ ---------- */
+
+    .catalog-layout {
+        display: block;
+
+        padding: 28px 16px 40px;
+    }
+
+    .catalog-sidebar {
+        margin-bottom: 28px;
+    }
+
+    .catalog-sidebar label {
+        font-size: 13px;
+    }
+
+    .catalog-main h1 {
+        font-size: 28px;
+    }
+
+    .catalog-grid {
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+    }
+
+    .catalog-card h3 {
+        font-size: 15px;
+    }
+
+
+    /* ---------- ФРИЛАНСЕРЫ ---------- */
+
+    .freelancers-page {
+        padding: 28px 16px 40px;
+    }
+
+    .freelancers-page h1 {
+        margin-bottom: 20px;
+
+        font-size: 28px;
+    }
+
+    .freelancer-filters {
+        gap: 8px;
+
+        margin-bottom: 22px;
+
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .filter-button {
+        flex-shrink: 0;
+
+        min-height: 34px;
+
+        padding: 0 16px;
+
+        font-size: 13px;
+    }
+
+    .freelancer-card {
+        display: block;
+
+        padding: 18px;
+
+        border-radius: 16px;
+    }
+
+    .freelancer-info {
+        align-items: flex-start;
+
+        margin-bottom: 20px;
+    }
+
+    .freelancer-avatar {
+        width: 65px;
+        height: 65px;
+    }
+
+    .freelancer-text {
+        margin-left: 14px;
+    }
+
+    .freelancer-name {
+        font-size: 15px;
+    }
+
+    .freelancer-role {
+        margin: 8px 0 5px;
+
+        font-size: 13px;
+    }
+
+    .freelancer-description {
+        font-size: 12px;
+    }
+
+    .freelancer-portfolio {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    .project-preview {
+        height: 100px;
+
+        border-radius: 12px;
+    }
+
+
+    /* ---------- ПУБЛИЧНЫЙ ПРОФИЛЬ ---------- */
+
+    .profile-page {
+        padding: 0 16px 40px;
+    }
+
+    .profile-cover {
+        height: 150px;
+    }
+
+    .profile-header {
+        min-height: auto;
+
+        padding: 85px 0 22px;
+
+        display: block;
+    }
+
+    .profile-avatar {
+        width: 120px;
+        height: 120px;
+
+        left: 18px;
+        top: -60px;
+    }
+
+    .profile-main-info h1 {
+        margin-bottom: 8px;
+
+        font-size: 27px;
+    }
+
+    .profile-main-info p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .profile-actions {
+        margin-left: 0;
+        margin-top: 18px;
+    }
+
+    .profile-message {
+        min-width: 115px;
+        height: 42px;
+    }
+
+    .profile-more {
+        width: 42px;
+        height: 42px;
+    }
+
+    .profile-content {
+        padding-top: 18px;
+    }
+
+    .profile-content h2 {
+        font-size: 24px;
+    }
+
+    .about-section p {
+        font-size: 14px;
+    }
+
+    .skills-list {
+        gap: 9px;
+    }
+
+    .skills-list span {
+        min-width: auto;
+        height: 38px;
+
+        padding: 0 15px;
+
+        font-size: 13px;
+    }
+
+    .profile-projects {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-project {
+        height: 190px;
+    }
+
+
+    /* ---------- СТРАНИЦА ПРОЕКТА ---------- */
+
+    .project-page {
+        padding: 24px 16px 40px;
+    }
+
+    .back-link {
+        margin-bottom: 20px;
+
+        font-size: 14px;
+    }
+
+    .project-page h1 {
+        font-size: 28px;
+        line-height: 1.15;
+    }
+
+    .project-author {
+        font-size: 14px;
+    }
+
+    .project-main-image {
+        height: 220px;
+
+        border-radius: 14px;
+    }
+
+    .project-thumbnails {
+        gap: 10px;
+
+        flex-wrap: wrap;
+    }
+
+    .project-thumbnail {
+        width: calc(50% - 5px);
+        height: 80px;
+
+        border-radius: 12px;
+    }
+
+    .project-description h2,
+    .project-skills h2 {
+        font-size: 24px;
+    }
+
+    .project-description p {
+        font-size: 14px;
+    }
+
+    .project-tags {
+        gap: 8px;
+    }
+
+    .project-tags span {
+        min-width: auto;
+        height: 38px;
+
+        padding: 0 15px;
+
+        font-size: 13px;
+    }
+
+
+    /* ---------- ДОБАВИТЬ / РЕДАКТИРОВАТЬ ПРОЕКТ ---------- */
+
+    .add-project-page {
+        padding: 28px 16px 40px;
+    }
+
+    .add-project-page h1 {
+        margin-bottom: 24px;
+
+        font-size: 28px;
+    }
+
+    .add-project-form label {
+        font-size: 13px;
+    }
+
+    .add-project-form input,
+    .add-project-form select {
+        height: 42px;
+    }
+
+    .add-project-form textarea {
+        height: 100px;
+    }
+
+    .project-upload {
+        height: 145px;
+
+        padding: 20px;
+
+        text-align: center;
+    }
+
+    .add-project-actions {
+        gap: 10px;
+
+        flex-wrap: wrap;
+    }
+
+    .publish-project,
+    .cancel-project {
+        min-width: 120px;
+        height: 42px;
+    }
+
+
+    /* ---------- ЛИЧНЫЙ КАБИНЕТ ---------- */
+
+    .account-page {
+        display: block;
+
+        min-height: auto;
+    }
+
+    .account-sidebar {
+        padding: 26px 16px;
+
+        text-align: center;
+    }
+
+    .account-avatar {
+        width: 100px;
+        height: 100px;
+
+        margin-bottom: 14px;
+    }
+
+    .account-sidebar h2 {
+        font-size: 22px;
+    }
+
+    .account-menu {
+        gap: 12px;
+    }
+
+    .account-menu a {
+        font-size: 13px;
+    }
+
+    .account-content {
+        padding: 30px 16px 40px;
+    }
+
+    .account-content h1 {
+        margin-bottom: 20px;
+
+        font-size: 28px;
+    }
+
+    .account-project {
+        min-height: auto;
+
+        padding: 12px;
+
+        align-items: flex-start;
+    }
+
+    .account-project-image {
+        width: 90px;
+        height: 75px;
+
+        border-radius: 12px;
+    }
+
+    .account-project-info {
+        min-height: 75px;
+
+        margin-left: 12px;
+    }
+
+    .account-project-info h3 {
+        font-size: 13px;
+        line-height: 1.25;
+    }
+
+    .account-project-actions {
+        gap: 10px;
+
+        flex-wrap: wrap;
+    }
+
+    .account-project-actions a,
+    .delete-project {
+        font-size: 12px;
+    }
+
+
+    /* ---------- ВХОД / РЕГИСТРАЦИЯ / РЕДАКТИРОВАНИЕ ПРОФИЛЯ ---------- */
+
+    .auth-page {
+        padding: 28px 16px 40px;
+    }
+
+    .auth-card {
+        max-width: none;
+
+        padding: 22px 18px;
+
+        border-radius: 16px;
+    }
+
+    .auth-card h1 {
+        margin-bottom: 24px;
+
+        font-size: 28px;
+    }
+
+    .auth-form label {
+        font-size: 13px;
+    }
+
+    .auth-form input {
+        height: 42px;
+
+        margin-bottom: 15px;
+    }
+
+    .auth-button {
+        height: 44px;
+    }
+}

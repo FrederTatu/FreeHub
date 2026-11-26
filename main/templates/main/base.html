@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freehub</title>
+    <link rel="stylesheet" href="{% static 'main/style.css' %}?v=9">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="site-header">
+        <a href="{% url 'home' %}" class="logo">Freehub</a>
+        
+        <nav class="main-nav">
+            <a href="{% url 'catalog' %}">Работы</a>
+            <a href="{% url 'freelancers' %}">Фрилансеры</a>
+        </nav>
+
+        <div class="header-actions">
+            <input class="header-search" type="text" placeholder="">
+            <a href="{% url 'add_project' %}" class="add-project">+ Добавить проект</a>
+            <a href="{% url 'account' %}" class="avatar">
+
+                {% if request.user.is_authenticated %}
+
+                {% if request.user.username == "admin" %}
+                    <img src="{% static 'main/images/anna_avatar.png' %}" alt="Анна Крылова">
+
+                {% elif request.user.username == "ilya2" %}
+                    <img src="{% static 'main/images/ilya_avatar.png' %}" alt="Илья Морозов">
+
+            {% endif %}
+
+    {% endif %}
+
+            </a>
+        </div>
+    </header>
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

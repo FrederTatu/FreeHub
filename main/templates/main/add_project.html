@@ -1,0 +1,43 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+
+<section class="add-project-page">
+
+    <h1>{{ page_title|default:"Добавить проект" }}</h1>
+
+    <form method="post" class="add-project-form">
+        {% csrf_token %}
+
+        <label for="project-title">Название проекта</label>
+        {{ form.title }}
+
+        <label for="project-category">Категория</label>
+        {{ form.category }}
+
+        <label for="project-description">Описание</label>
+        {{ form.description }}
+
+        <label>Изображения</label>
+
+        <div class="project-upload">
+            <span>Добавьте файлы вашего проекта</span>
+        </div>
+
+        <label for="project-tags">Теги</label>
+        {{ form.tags }}
+
+        <button type="submit" class="publish-project">
+            {{ submit_text|default:"Опубликовать" }}
+        </button>
+
+            <a href="{% url 'home' %}" class="cancel-project">
+                Отмена
+            </a>
+        </div>
+
+    </form>
+
+</section>
+
+{% endblock %}

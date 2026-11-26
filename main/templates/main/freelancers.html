@@ -1,0 +1,185 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section class="freelancers-page">
+
+    <h1>Фрилансеры</h1>
+
+    <div class="freelancer-filters">
+        <button class="filter-button filter-active">Все</button>
+        <button class="filter-button">Дизайнеры</button>
+        <button class="filter-button">Разработчики</button>
+        <button class="filter-button">Маркетологи</button>
+        <button class="filter-button">Фотографы</button>
+        <button class="filter-button">Монтажёры</button>
+    </div>
+
+
+    <div class="freelancers-list">
+
+
+        <!-- АННА КРЫЛОВА -->
+
+        <article class="freelancer-card">
+
+            <div class="freelancer-info">
+
+                <div class="freelancer-avatar">
+                    <img src="{% static 'main/images/anna_avatar.png' %}" alt="Анна Крылова">
+                </div>
+
+                <div class="freelancer-text">
+
+                    <a href="{% url 'profile' 'admin' %}" class="freelancer-name">
+                        Анна Крылова →
+                    </a>
+
+                    <p class="freelancer-role">
+                        UX/UI-дизайнер
+                    </p>
+
+                    <p class="freelancer-description">
+                        Проектирую удобные и стильные цифровые продукты.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="freelancer-portfolio">
+
+                <div class="project-preview">
+                    <img src="{% static 'main/images/music_app.png' %}" alt="Музыкальное приложение">
+                </div>
+
+                <div class="project-preview">
+                    <img src="{% static 'main/images/fitness_app.png' %}" alt="Фитнес-приложение">
+                </div>
+
+                <div class="project-preview">
+                    <img src="{% static 'main/images/home_app.png' %}" alt="Дом">
+                </div>
+
+                <div class="project-preview">
+                    <img src="{% static 'main/images/study_app.png' %}" alt="Платформа онлайн-обучения">
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ИЛЬЯ МОРОЗОВ -->
+
+        <article class="freelancer-card">
+
+            <div class="freelancer-info">
+
+                <div class="freelancer-avatar">
+                    <img src="{% static 'main/images/ilya_avatar.png' %}" alt="Илья Морозов">
+                </div>
+
+                <div class="freelancer-text">
+
+                    <a href="{% url 'profile' 'ilya2' %}" class="freelancer-name">
+                        Илья Морозов →
+                    </a>
+
+                    <p class="freelancer-role">
+                        Веб-разработчик
+                    </p>
+
+                    <p class="freelancer-description">
+                        Создаю современные и быстрые веб-приложения.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="freelancer-portfolio">
+
+                <div class="project-preview">
+                    <img src="{% static 'main/images/world_app.png' %}" alt="Туристический сервис">
+                </div>
+
+                <div class="project-preview">
+                    <img src="{% static 'main/images/study_app.png' %}" alt="Образовательная платформа">
+                </div>
+
+                <div class="project-preview">
+                    <img src="{% static 'main/images/bank_app.png' %}" alt="Веб-проект">
+                </div>
+
+                <div class="project-preview">
+                    <img src="{% static 'main/images/music_app.png' %}" alt="Музыкальный сервис">
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- МАРИЯ ЛЕБЕДЕВА -->
+
+        <article class="freelancer-card">
+
+            <div class="freelancer-info">
+
+                <div class="freelancer-avatar">
+                    <img src="{% static 'main/images/maria_avatar.png' %}" alt="Мария Лебедева">
+                </div>
+
+                <div class="freelancer-text">
+
+                    <a href="{% url 'profile' 'maria' %}" class="freelancer-name">
+                        Мария Лебедева →
+                    </a>
+
+                    <p class="freelancer-role">
+                        Фотограф
+                    </p>
+
+                    <p class="freelancer-description">
+                        Фотографирую то, чего не видят другие.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="freelancer-portfolio">
+
+                <div class="project-preview">
+                    <img src="{% static 'main/images/maria_portrait.png' %}" alt="Портретная съёмка">
+                </div>
+
+                <div class="project-preview">
+                    <img src="{% static 'main/images/maria_product.png' %}" alt="Предметная съёмка">
+                </div>
+
+                <div class="project-preview">
+                    <img src="{% static 'main/images/maria_architecture.png' %}" alt="Архитектурная съёмка">
+                </div>
+
+                <div class="project-preview">
+                    <img src="{% static 'main/images/maria_lifestyle.png' %}" alt="Lifestyle-съёмка">
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+{% endblock %}

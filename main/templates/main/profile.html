@@ -1,0 +1,111 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section class="profile-page">
+
+    <div class="profile-cover"></div>
+
+    <div class="profile-header">
+
+        <div class="profile-avatar">
+
+            {% if username == "admin" %}
+                <img src="{% static 'main/images/anna_avatar.png' %}" alt="Анна Крылова">
+
+            {% elif username == "ilya2" %}
+                <img src="{% static 'main/images/ilya_avatar.png' %}" alt="Илья Морозов">
+
+            {% elif username == "maria" %}
+                <img src="{% static 'main/images/maria_avatar.png' %}" alt="Мария Лебедева">
+
+            {% endif %}
+
+        </div>
+
+        <div class="profile-main-info">
+
+            <h1>{{ profile_data.name }}</h1>
+
+            <p>
+                {{ profile_data.profession }}
+                • {{ profile_data.city }}
+                • Принимаю заказы
+            </p>
+
+        </div>
+
+        <div class="profile-actions">
+
+            <a href="#" class="profile-message">
+                Написать
+            </a>
+
+            <button class="profile-more">
+                ...
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="profile-content">
+
+        <section class="about-section">
+
+            <h2>О себе</h2>
+
+            <p>
+                {{ profile_data.about }}
+            </p>
+
+        </section>
+
+
+        <section class="skills-section">
+
+            <h2>Навыки</h2>
+
+            <div class="skills-list">
+
+                {% for skill in profile_data.skills %}
+
+                    <span>{{ skill }}</span>
+
+                {% endfor %}
+
+            </div>
+
+        </section>
+
+
+        <section class="profile-portfolio">
+
+            <h2>Портфолио</h2>
+
+            <div class="profile-projects">
+
+                {% for item in profile_data.portfolio %}
+
+                    <div class="profile-project">
+
+                        <img
+                            src="{% static item.image %}"
+                            alt="{{ item.title }}"
+                        >
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+        </section>
+
+    </div>
+
+</section>
+
+{% endblock %}

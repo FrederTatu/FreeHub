@@ -1,0 +1,92 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-content">
+        <h1>Платформа<br>
+            для фрилансеров<br>
+            и их проектов
+        </h1>
+
+        <p>
+            Показывайте свои работы,<br>
+            находите клиентов и<br>
+            вдохновляйтесь проектами других<br>
+            специалистов.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#" class="primary-button">Начать сейчас</a>
+            <a href="#" class="secondary-button">Как это работает?</a>
+        </div>
+    </div>
+
+    <div class="hero-images">
+    <div class="hero-card hero-card-1">
+        <img src="{% static 'main/images/hero-music.jpg' %}" alt="Музыкальное приложение">
+    </div>
+
+    <div class="hero-card hero-card-2">
+        <img src="{% static 'main/images/hero-illustration.jpg' %}" alt="Иллюстрация">
+    </div>
+
+    <div class="hero-card hero-card-3">
+        <img src="{% static 'main/images/hero-branding.jpg' %}" alt="Брендинг">
+    </div>
+
+    <div class="hero-card hero-card-4">
+        <img src="{% static 'main/images/hero-banking.jpg' %}" alt="Банковское приложение">
+    </div>
+</div>
+
+</section>
+
+<section class="popular">
+
+    <div class="popular-header">
+        <h2>Популярные работы</h2>
+        <a href="{% url 'catalog' %}">Смотреть все →</a>
+    </div>
+
+    <div class="project-grid">
+
+        <article class="project-card">
+            <div class="project-image">
+                <img src="{% static 'main/images/music_app.png' %}"
+                     alt="Дизайн музыкального приложения">
+            </div>
+            <h3>Дизайн музыкального приложения</h3>
+        </article>
+
+        <article class="project-card">
+            <div class="project-image">
+                <img src="{% static 'main/images/home_app.png' %}"
+                     alt="Брендинг для жилого комплекса">
+            </div>
+            <h3>Брендинг для жилого комплекса</h3>
+        </article>
+
+        <article class="project-card">
+            <div class="project-image">
+                <img src="{% static 'main/images/book.png' %}"
+                     alt="Иллюстрации для книги">
+            </div>
+            <h3>Иллюстрации для книги</h3>
+        </article>
+
+        <article class="project-card">
+            <div class="project-image">
+                <img src="{% static 'main/images/bank_app.png' %}"
+                     alt="UI/UX мобильного банка">
+            </div>
+            <h3>UI/UX мобильного банка</h3>
+        </article>
+
+    </div>
+
+</section>
+
+{% endblock %}

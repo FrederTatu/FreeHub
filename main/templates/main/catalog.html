@@ -1,0 +1,75 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="catalog-layout">
+
+    <aside class="catalog-sidebar">
+        <h3>Категории</h3>
+
+        <label><input type="checkbox"> Все</label>
+        <label><input type="checkbox"> Дизайн</label>
+        <label><input type="checkbox"> Разработка</label>
+        <label><input type="checkbox"> Маркетинг</label>
+        <label><input type="checkbox"> Фото</label>
+        <label><input type="checkbox"> Видео</label>
+        <label><input type="checkbox"> Иллюстрация</label>
+        <label><input type="checkbox"> 3D / Motion</label>
+
+        <h3>Сортировка</h3>
+
+        <select>
+            <option>Сначала новые</option>
+            <option>Сначала популярные</option>
+            <option>Сначала старые</option>
+        </select>
+    </aside>
+
+    <main class="catalog-content">
+
+        <h1>Каталог работ</h1>
+
+        <div class="catalog-grid">
+
+            {% for project in projects %}
+
+                <a class="catalog-card" href="{% url 'project' project.id %}">
+
+                    <div class="catalog-card-image">
+
+                        {% if project.title == "Дизайн музыкального приложения" %}
+                            <img src="{% static 'main/images/music_app.png' %}" alt="{{ project.title }}">
+
+                        {% elif project.title == "Сайт для городской кофейни" %}
+                            <img src="{% static 'main/images/home_app.png' %}" alt="{{ project.title }}">
+
+                        {% elif project.title == "Дизайн фитнес-приложения" %}
+                            <img src="{% static 'main/images/fitness_app.png' %}" alt="{{ project.title }}">
+
+                        {% elif project.title == "Брендинг для городской кофейни" %}
+                            <img src="{% static 'main/images/coffee_brand.png' %}" alt="{{ project.title }}">
+
+                        {% elif project.title == "Сайт туристического сервиса" %}
+                            <img src="{% static 'main/images/world_app.png' %}" alt="{{ project.title }}">
+
+                        {% elif project.title == "Платформа онлайн-обучения" %}
+                            <img src="{% static 'main/images/study_app.png' %}" alt="{{ project.title }}">
+
+                        {% endif %}
+
+                    </div>
+
+                    <h3>{{ project.title }}</h3>
+
+                </a>
+
+            {% endfor %}
+
+        </div>
+
+    </main>
+
+</div>
+
+{% endblock %}
